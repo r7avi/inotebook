@@ -1,0 +1,104 @@
+/* Dashboard.css */
+
+/* Wrapper for centering and spacing */
+.dashboard-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+}
+
+/* Heading styles */
+.dashboard-heading {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #333333;
+  font-weight: 700;
+}
+
+/* Information styling */
+.dashboard-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.dashboard-info p {
+  font-size: 1rem;
+  color: #555555;
+  margin: 5px 0;
+  line-height: 1.6;
+}
+
+.dashboard-info strong {
+  color: #222222;
+  font-weight: 600;
+}
+
+/* Button styling */
+.dashboard-logout-button {
+  display: inline-block;
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  color: #ffffff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-top: 20px;
+  text-decoration: none;
+}
+
+.dashboard-logout-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.dashboard-logout-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .dashboard-container {
+      padding: 15px;
+  }
+
+  .dashboard-heading {
+      font-size: 1.75rem;
+  }
+
+  .dashboard-info p {
+      font-size: 0.95rem;
+  }
+
+  .dashboard-logout-button {
+      font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .dashboard-container {
+      padding: 10px;
+  }
+
+  .dashboard-heading {
+      font-size: 1.5rem;
+  }
+
+  .dashboard-info p {
+      font-size: 0.9rem;
+  }
+
+  .dashboard-logout-button {
+      font-size: 0.9rem;
+  }
+}

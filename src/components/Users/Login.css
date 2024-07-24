@@ -1,0 +1,123 @@
+/* Login.css */
+
+/* General container styles */
+.login-container {
+  max-width: 90%; /* Adjust for mobile responsiveness */
+  width: 400px; /* Fixed width for better control */
+  margin: 40px auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Heading styles */
+.login-heading {
+  font-size: 1.75rem; /* Adjust for mobile readability */
+  margin-bottom: 20px;
+  color: #333333;
+  font-weight: 700;
+}
+
+/* Form styling */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Input and label styling */
+.form-label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555555;
+  font-weight: 600;
+  text-align: left;
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  color: #333333;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Button styling */
+.btn-primary {
+  padding: 12px;
+  font-size: 1.1rem;
+  color: #ffffff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.btn-primary:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .login-container {
+      width: 90%;
+      padding: 15px;
+  }
+
+  .login-heading {
+      font-size: 1.5rem;
+  }
+
+  .form-control {
+      font-size: 0.95rem;
+  }
+
+  .btn-primary {
+      font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .login-container {
+      width: 100%;
+      padding: 10px;
+  }
+
+  .login-heading {
+      font-size: 1.25rem;
+  }
+
+  .form-control {
+      font-size: 0.9rem;
+  }
+
+  .btn-primary {
+      font-size: 0.9rem;
+  }
+}
+
+/* Alert styling */
+.alert {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  padding: 10px;
+  border-radius: 4px;
+}

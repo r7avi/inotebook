@@ -1,18 +1,24 @@
 // routes/auth.js
 const express = require('express');
 const router = express.Router();
-const bcrypt = require('bcrypt');
-const User = require('../models/User'); // Adjust the path as needed
+const jwt = require('jsonwebtoken');
+const User = require('../models/User');
 
 // User registration
 router.post('/register', async (req, res) => {
     const { username, password, name, phoneNumber, email, course } = req.body;
-    
+
     try {
+        // Check if the user already exists
+        const existingUser = await User.findOne({ username });
+        if (existingUser) {
+            return res.status(400).json({ error: 'Username already exists' });
+        }
+
         // Create a new user
         const newUser = new User({ 
             username, 
-            password, 
+            password, // Password will be hashed in pre-save hook
             name, 
             phoneNumber, 
             email, 
@@ -22,6 +28,7 @@ router.post('/register', async (req, res) => {
         await newUser.save();
         res.status(201).json({ message: 'User registered successfully', user: newUser });
     } catch (error) {
+        console.error('Registration error:', error);
         res.status(400).json({ error: error.message });
     }
 });
@@ -34,17 +41,24 @@ router.post('/login', async (req, res) => {
         // Find the user by username
         const user = await User.findOne({ username });
         if (!user) {
+            console.log('User not found:', username);
             return res.status(400).json({ error: 'Invalid username or password' });
         }
 
-        // Compare the provided password with the hashed password in the database
-        const isMatch = await bcrypt.compare(password, user.password);
+        // Compare the provided password with the hashed password
+        const isMatch = await user.comparePassword(password);
         if (!isMatch) {
+            console.log('Password mismatch for user:', username);
             return res.status(400).json({ error: 'Invalid username or password' });
         }
 
-        res.status(200).json({ message: 'Login successful' });
+        // Generate JWT token
+        const token = jwt.sign({ _id: user._id }, process.env.JWT_SECRET, { expiresIn: '1h' });
+
+        // Send the token in the response
+        res.status(200).json({ token });
     } catch (error) {
+        console.error('Login error:', error);
         res.status(400).json({ error: error.message });
     }
 });
