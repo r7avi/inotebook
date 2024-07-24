@@ -52,8 +52,8 @@ export default function Header() {
                   Courses
                 </a>
                 <ul className="dropdown-menu">
-                  <li><a className="dropdown-item" href="/">DevOps</a></li>
-                  <li><a className="dropdown-item" href="/">Go Lang</a></li>
+                  <li><Link className="dropdown-item" to="/devops-course">DevOps</Link></li>
+                  <li><a className="dropdown-item" href="/golang-course">Go Lang</a></li>
                   <li><hr className="dropdown-divider"/></li>
                   <li><a className="dropdown-item" href="/">Python</a></li>
                 </ul>

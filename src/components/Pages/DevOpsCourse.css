@@ -1,0 +1,13 @@
+/* DevOpsCourse.css */
+.devops-course-container {
+  background-color: #f8f9fa; /* Light background color */
+  color: #212529; /* Black text color */
+}
+
+.devops-course-container a {
+  color: #007bff; /* Bootstrap primary color for links */
+}
+
+.devops-course-container a:hover {
+  color: #0056b3; /* Darker shade on hover */
+}

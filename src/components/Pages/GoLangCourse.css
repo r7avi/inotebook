@@ -1,0 +1,19 @@
+/* GoLangCourse.css */
+.golang-course-container {
+  background-color: #f8f9fa; /* Light background color */
+  color: #212529; /* Black text color */
+}
+
+.golang-course-container a {
+  color: #007bff; /* Bootstrap primary color for links */
+}
+
+.golang-course-container a:hover {
+  color: #0056b3; /* Darker shade on hover */
+}
+
+.golang-course-container img {
+  margin-top: 20px;
+  max-height: 400px;
+  object-fit: cover;
+}

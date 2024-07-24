@@ -5,6 +5,10 @@ import Home from './components/Home/Home';
 import Login from './components/Users/Login';
 import Register from './components/Users/Register';
 import Dashboard from './components/Users/Dashboard';
+import DevOpsCourse from './components/Pages/DevOpsCourse';
+import GoLangCourse from './components/Pages/GoLangCourse';
+
+
 
 function App() {
   return (
@@ -16,6 +20,9 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/devops-course" element={<DevOpsCourse />} />
+          <Route path="/golang-course" element={<GoLangCourse />} />
+          
         </Routes>
       </div>
     </Router>
