@@ -1,4 +1,3 @@
-// index.js
 const express = require('express');
 const cors = require('cors'); // Import the CORS middleware
 const connectToMongo = require('./db'); // Import the connectToMongo function
@@ -10,7 +9,8 @@ const authenticateToken = require('./middleware/authMiddleware'); // Import toke
 require('dotenv').config(); // Load environment variables from .env file
 
 const app = express();
-const port = 3001;
+const port = process.env.PORT || 3001;
+const host = '0.0.0.0'; // Listen on all network interfaces
 
 // Connect to MongoDB
 connectToMongo(); 
@@ -30,6 +30,6 @@ app.use('/api/auth', authRoutes); // Route for authentication
 app.use('/api/student', authenticateToken, studentRouter); // Routes for student data (requires authentication)
 
 // Start the server
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
+app.listen(port, host, () => {
+  console.log(`Server is running on http://${host}:${port}`);
 });

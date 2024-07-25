@@ -11,7 +11,7 @@ const Dashboard = () => {
         const fetchData = async () => {
             const token = localStorage.getItem('token');
             try {
-                const response = await axios.get('http://localhost:3001/api/student/data', {
+                const response = await axios.get('http://192.168.1.16:3001/api/student/data', {
                     headers: {
                         'Authorization': `Bearer ${token}`
                     }
