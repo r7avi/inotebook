@@ -1,0 +1,26 @@
+
+.carousel-item {
+  height: 500px;
+  background: #000;
+  color: #fff;
+  text-align: center;
+}
+
+.carousel-item img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.carousel-caption {
+  bottom: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #484848;
+  border-radius: 50%;
+}

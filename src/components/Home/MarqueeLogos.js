@@ -1,0 +1,131 @@
+import React from 'react'
+import './MarqueeLogos.css'; // Import the custom CSS for styling
+
+export default function MarqueeLogos() {
+  return (
+    <div>
+      
+{/* {Section 2} */}
+<div className="logoscontainer">
+        
+        <div className="logos__marquee">
+        <div className="marquee__logos">
+          <img 
+            src="https://assets-global.website-files.com/5d3e265ac89f6a3e64292efc/5d4234885e4c2e7955fc993c_zendesk.svg" 
+            width="125" 
+            height="24" 
+            loading="eager" 
+            alt="Zendesk" 
+            className="intro-logos_logo" 
+          />
+          <img 
+            src="https://assets-global.website-files.com/5d3e265ac89f6a3e64292efc/5f68c5ab2b2bc1f1cce91512_rakuten-logo-black.svg" 
+            width="100" 
+            height="31" 
+            loading="eager" 
+            alt="Rakuten" 
+            className="intro-logos_logo" 
+          />
+          <img 
+            src="https://assets-global.website-files.com/5d3e265ac89f6a3e64292efc/63601e7de4cee932ead423db_logo-nyt.svg" 
+            width="222" 
+            height="30" 
+            loading="eager" 
+            alt="NYT" 
+            className="intro-logos_logo" 
+          />
+          <img 
+            src="https://assets-global.website-files.com/5d3e265ac89f6a3e64292efc/614898ff2064cdb3edb45ec0_dell-black.svg" 
+            width="75" 
+            height="25" 
+            loading="eager" 
+            alt="Dell" 
+            className="intro-logos_logo" 
+          />
+          <img 
+            src="https://assets-global.website-files.com/5d3e265ac89f6a3e64292efc/5f68c62e7e087c31a302df7b_upwork-black-webclip.svg" 
+            width="105" 
+            height="32" 
+            loading="lazy" 
+            alt="Upwork" 
+            className="intro-logos_logo" 
+          />
+          <img 
+            src="https://assets-global.website-files.com/5d3e265ac89f6a3e64292efc/5d4b269921bce7314c68055f_Page%201.svg" 
+            width="130" 
+            height="25" 
+            loading="eager" 
+            alt="Lattice" 
+            className="intro-logos_logo" 
+          />
+          <img 
+            src="https://assets-global.website-files.com/5d3e265ac89f6a3e64292efc/618d7c5ba338e335284bd8ce_logo-pwc.svg" 
+            width="75" 
+            height="57" 
+            loading="eager" 
+            alt="PWC" 
+            className="intro-logos_logo cc-pwc" 
+          />
+        </div>
+        <div className="marquee__logos" aria-hidden="true">
+          <img 
+            src="https://assets-global.website-files.com/5d3e265ac89f6a3e64292efc/5d4234885e4c2e7955fc993c_zendesk.svg" 
+            width="125" 
+            height="24" 
+            loading="eager" 
+            alt="Zendesk" 
+            className="intro-logos_logo" 
+          />
+          <img 
+            src="https://assets-global.website-files.com/5d3e265ac89f6a3e64292efc/5f68c5ab2b2bc1f1cce91512_rakuten-logo-black.svg" 
+            width="100" 
+            height="31" 
+            loading="eager" 
+            alt="Rakuten" 
+            className="intro-logos_logo" 
+          />
+          <img 
+            src="https://assets-global.website-files.com/5d3e265ac89f6a3e64292efc/63601e7de4cee932ead423db_logo-nyt.svg" 
+            width="222" 
+            height="30" 
+            loading="eager" 
+            alt="NYT" 
+            className="intro-logos_logo" 
+          />
+          <img 
+            src="https://assets-global.website-files.com/5d3e265ac89f6a3e64292efc/614898ff2064cdb3edb45ec0_dell-black.svg" 
+            width="75" 
+            height="25" 
+            loading="eager" 
+            alt="Dell" 
+            className="intro-logos_logo" 
+          />
+          <img 
+            src="https://assets-global.website-files.com/5d3e265ac89f6a3e64292efc/5f68c62e7e087c31a302df7b_upwork-black-webclip.svg" 
+            width="105" 
+            height="32" 
+            loading="lazy" 
+            alt="Upwork" 
+            className="intro-logos_logo" 
+          />
+          <img 
+            src="https://assets-global.website-files.com/5d3e265ac89f6a3e64292efc/5d4b269921bce7314c68055f_Page%201.svg" 
+            width="130" 
+            height="25" 
+            loading="eager" 
+            alt="Lattice" 
+            className="intro-logos_logo" 
+          />
+          <img 
+            src="https://assets-global.website-files.com/5d3e265ac89f6a3e64292efc/618d7c5ba338e335284bd8ce_logo-pwc.svg" 
+            width="75" 
+            height="57" 
+            loading="eager" 
+            alt="PWC" 
+            className="intro-logos_logo cc-pwc" 
+          /></div>
+      </div>
+    </div>
+    </div>
+  )
+}

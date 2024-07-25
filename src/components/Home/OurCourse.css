@@ -1,0 +1,71 @@
+
+
+
+/* General styles for the tab navigation */
+.nav-tabs {
+  border-bottom: 2px solid #007bff; /* Change this to your preferred color */
+
+}
+
+.nav-tabs .nav-link {
+  border: 1px solid transparent;
+  margin-bottom: 1px;
+}
+
+.nav-tabs .nav-link.active {
+  color: #007bff; /* Active tab color */
+  background-color: #fff; /* Background color of the active tab */
+  border-color: #007bff #007bff #fff; /* Border color for the active tab */
+  font-weight: bold;
+}
+
+/* Styles for the tab content */
+.tab-content {
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  background-color: #f8f9fa; /* Light background for content */
+}
+
+.tab-pane {
+  padding: 1rem;
+  font-size: 1rem;
+}
+
+/* Optional: Add some box shadow for a more modern look */
+.tab-content {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+/* Course Tabs Section */
+.course-tabs-section {
+  margin-top: 20px;
+}
+
+.course-tabs-nav {
+  border-bottom: 2px solid #007bff;
+}
+
+.course-tabs-nav .nav-link {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-right: -1px;
+  font-family: 'Poppins', sans-serif; /* Ensure consistency */
+}
+
+.course-tabs-nav .nav-link.active {
+  background-color: #007bff;
+  color: #fff;
+  border-color: #007bff;
+}
+
+.course-tabs-content .tab-pane {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  font-family: 'Poppins', sans-serif; /* Ensure consistency */
+}
