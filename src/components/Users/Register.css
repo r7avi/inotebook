@@ -69,3 +69,54 @@ form {
       font-size: 0.9rem; /* Slightly smaller font size for small screens */
   }
 }
+
+/* Register.css */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.success-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  text-align: center;
+}
+
+.success-container h2 {
+  color: #2844a7; /* Green color for success */
+  margin-bottom: 1rem;
+}
+
+.success-container p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.register-container {
+  padding: 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.register-heading {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.alert {
+  color: red;
+  margin-bottom: 1rem;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}

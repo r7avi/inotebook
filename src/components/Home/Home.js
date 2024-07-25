@@ -9,7 +9,7 @@ export default function Home() {
 
 {/* {Section 1} */}
 
-<div class="container mt-5">
+<div class="container mt-4">
     <div id="courseSlider" class="carousel slide carousel-fade" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
@@ -240,6 +240,8 @@ export default function Home() {
         </div>
     </div>
 </div>
+
+{/* {Section 3} */}
 
 
     </div>

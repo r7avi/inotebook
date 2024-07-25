@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import './Register.css'; // Import the custom CSS
@@ -10,8 +10,21 @@ const Register = () => {
     const [phoneNumber, setPhoneNumber] = useState('');
     const [email, setEmail] = useState('');
     const [course, setCourse] = useState('');
-    const [error, setError] = useState(''); // State to hold error messages
+    const [error, setError] = useState('');
+    const [success, setSuccess] = useState(false); // State to manage success message
     const navigate = useNavigate();
+
+    useEffect(() => {
+        if (success) {
+            // Redirect to login page after 3 seconds
+            const timer = setTimeout(() => {
+                navigate('/login');
+            }, 3000);
+
+            // Cleanup timer if the component unmounts
+            return () => clearTimeout(timer);
+        }
+    }, [success, navigate]);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -26,15 +39,42 @@ const Register = () => {
             });
 
             if (response.status === 201) {
-                // Optionally, you can store the token here if needed
-                // localStorage.setItem('token', response.data.token);
-                navigate('/login');
+                // Notify user via email
+                await axios.post('http://192.168.1.16:3001/api/notifications/email', {
+                    toUser: email,
+                    toAdmin: 'ravi7@live.in',
+                    subject: 'Registration Successful',
+                    body: `Hello ${name}, your registration was successful. Welcome to our platform!`
+                });
+
+                // Notify admin via email
+                await axios.post('http://192.168.1.16:3001/api/notifications/email', {
+                    toUser: 'ravi@justconstruct.co', // Admin email
+                    toAdmin: 'ravi7@live.in',
+                    subject: 'New User Registered',
+                    body: `A new user has registered with the following details:
+                    \nName: ${name}
+                    \nEmail: ${email}
+                    \nPhone Number: ${phoneNumber}
+                    \nCourse: ${course}`
+                });
+                
+                setSuccess(true);
             }
         } catch (error) {
             setError(error.response?.data?.error || 'Registration failed');
             console.error('Registration failed', error.response?.data?.error || error.message);
         }
     };
+
+    if (success) {
+        return (
+            <div className="success-container">
+                <h2>Registration Successful</h2>
+                <p>Thank you for registering! You will receive an email confirmation shortly.</p>
+            </div>
+        );
+    }
 
     return (
         <div className="register-container">

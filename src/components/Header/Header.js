@@ -41,6 +41,8 @@ export default function Header() {
               <li className="nav-item">
                 <Link className="nav-link active" aria-current="page" to="/">Home</Link>
               </li>
+              <li><a className="nav-link" href="/enquiry">Enquiry</a></li>
+
               <li className="nav-item dropdown">
                 <a 
                   className="nav-link dropdown-toggle" 
@@ -58,6 +60,7 @@ export default function Header() {
                   <li><a className="dropdown-item" href="/">Python</a></li>
                 </ul>
               </li>
+              
               {isAuthenticated && (
                 <li className="nav-item">
                   <Link className="nav-link" to="/dashboard">Dashboard</Link>
