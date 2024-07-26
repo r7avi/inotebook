@@ -29,7 +29,7 @@ const Register = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://192.168.1.16:3001/api/auth/register', {
+            const response = await axios.post('http://194.195.117.187:3001/api/auth/register', {
                 username,
                 password,
                 name,
@@ -40,7 +40,7 @@ const Register = () => {
 
             if (response.status === 201) {
                 // Notify user via email
-                await axios.post('http://192.168.1.16:3001/api/notifications/email', {
+                await axios.post('http://194.195.117.187:3001/api/notifications/email', {
                     toUser: email,
                     toAdmin: 'ravi7@live.in',
                     subject: 'Registration Successful',
@@ -48,7 +48,7 @@ const Register = () => {
                 });
 
                 // Notify admin via email
-                await axios.post('http://192.168.1.16:3001/api/notifications/email', {
+                await axios.post('http://194.195.117.187:3001/api/notifications/email', {
                     toUser: 'ravi@justconstruct.co', // Admin email
                     toAdmin: 'ravi7@live.in',
                     subject: 'New User Registered',

@@ -41,7 +41,7 @@ export default function Header() {
               <li className="nav-item">
                 <Link className="nav-link active" aria-current="page" to="/">Home</Link>
               </li>
-              <li><a className="nav-link" href="/enquiry">Enquiry</a></li>
+              <li><Link className="nav-link" to="/enquiry">Enquiry</Link></li>
 
               <li className="nav-item dropdown">
                 <a 
@@ -55,7 +55,7 @@ export default function Header() {
                 </a>
                 <ul className="dropdown-menu">
                   <li><Link className="dropdown-item" to="/devops-course">DevOps</Link></li>
-                  <li><a className="dropdown-item" href="/golang-course">Go Lang</a></li>
+                  <li><Link className="dropdown-item" to="/golang-course">Go Lang</Link></li>
                   <li><hr className="dropdown-divider"/></li>
                   <li><a className="dropdown-item" href="/">Python</a></li>
                 </ul>

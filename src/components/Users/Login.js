@@ -14,7 +14,7 @@ const Login = () => {
         setError(null); // Reset error state
 
         try {
-            const response = await axios.post('http://192.168.1.16:3001/api/auth/login', { username, password });
+            const response = await axios.post('http://194.195.117.187:3001/api/auth/login', { username, password });
             if (response.status === 200) {
                 // Assuming JWT token is returned
                 localStorage.setItem('token', response.data.token);

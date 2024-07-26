@@ -68,7 +68,7 @@ export default function EnquiryPage() {
         event.preventDefault();
         if (validateForm()) {
             try {
-                const response = await fetch('http://localhost:3001/api/enquiry/submit-enquiry', {
+                const response = await fetch('http://194.195.117.187:3001/api/enquiry/submit-enquiry', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
