@@ -1,15 +1,13 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Header from './components/Header/Header';
-import Home from './components/Home/Home';
-import Login from './components/Users/Login';
-import Register from './components/Users/Register';
-import Dashboard from './components/Users/Dashboard';
-import EnquiryPage from './components/Enquiry/EnquiryPage'; // Updated import path
-import DevOpsCourse from './components/Pages/DevOpsCourse';
-import GoLangCourse from './components/Pages/GoLangCourse';
-
-
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Header from "./components/Header/Header";
+import Home from "./components/Home/Home";
+import Login from "./components/Users/Login";
+import Register from "./components/Users/Register";
+import Dashboard from "./components/Users/Dashboard";
+import EnquiryPage from "./components/Enquiry/EnquiryPage"; // Updated import path
+import DevOpsCourse from "./components/Pages/DevOpsCourse";
+import GoLangCourse from "./components/Pages/GoLangCourse";
 
 function App() {
   return (
@@ -24,7 +22,6 @@ function App() {
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/devops-course" element={<DevOpsCourse />} />
           <Route path="/golang-course" element={<GoLangCourse />} />
-          
         </Routes>
       </div>
     </Router>

@@ -1,33 +1,35 @@
-import React from 'react';
-import { Link, useNavigate } from 'react-router-dom'; // useNavigate for redirection
-import './Header.css'; // Import the CSS file for styling
+import React from "react";
+import { Link, useNavigate } from "react-router-dom"; // useNavigate for redirection
+import "./Header.css"; // Import the CSS file for styling
 
 export default function Header() {
   const navigate = useNavigate();
-  
+
   // Function to handle logout
   const handleLogout = () => {
-    localStorage.removeItem('token');
-    navigate('/login');
+    localStorage.removeItem("token");
+    navigate("/login");
   };
 
   // Check if user is authenticated
-  const isAuthenticated = !!localStorage.getItem('token');
+  const isAuthenticated = !!localStorage.getItem("token");
 
   return (
     <nav className="navbar navbar-expand-lg my-4">
       <div className="container-fluid">
         {/* Logo on the left */}
-        <Link className="navbar-brand" to="/">React Application</Link>
+        <Link className="navbar-brand" to="/">
+          React Application
+        </Link>
 
         {/* Toggler for mobile view */}
-        <button 
-          className="navbar-toggler" 
-          type="button" 
-          data-bs-toggle="collapse" 
-          data-bs-target="#navbarSupportedContent" 
-          aria-controls="navbarSupportedContent" 
-          aria-expanded="false" 
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
           aria-label="Toggle navigation"
         >
           <span className="navbar-toggler-icon"></span>
@@ -39,49 +41,79 @@ export default function Header() {
             {/* Links */}
             <ul className="navbar-nav mb-2 mb-lg-0 me-4">
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="/">Home</Link>
+                <Link className="nav-link active" aria-current="page" to="/">
+                  Home
+                </Link>
               </li>
-              <li><Link className="nav-link" to="/enquiry">Enquiry</Link></li>
+              <li>
+                <Link className="nav-link" to="/enquiry">
+                  Enquiry
+                </Link>
+              </li>
 
               <li className="nav-item dropdown">
-                <a 
-                  className="nav-link dropdown-toggle" 
-                  href="/" 
-                  role="button" 
-                  data-bs-toggle="dropdown" 
+                <a
+                  className="nav-link dropdown-toggle"
+                  href="/"
+                  role="button"
+                  data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
                   Courses
                 </a>
                 <ul className="dropdown-menu">
-                  <li><Link className="dropdown-item" to="/devops-course">DevOps</Link></li>
-                  <li><Link className="dropdown-item" to="/golang-course">Go Lang</Link></li>
-                  <li><hr className="dropdown-divider"/></li>
-                  <li><a className="dropdown-item" href="/">Python</a></li>
+                  <li>
+                    <Link className="dropdown-item" to="/devops-course">
+                      DevOps
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="/golang-course">
+                      Go Lang
+                    </Link>
+                  </li>
+                  <li>
+                    <hr className="dropdown-divider" />
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="/">
+                      Python
+                    </a>
+                  </li>
                 </ul>
               </li>
-              
+
               {isAuthenticated && (
                 <li className="nav-item">
-                  <Link className="nav-link" to="/dashboard">Dashboard</Link>
+                  <Link className="nav-link" to="/dashboard">
+                    Dashboard
+                  </Link>
                 </li>
               )}
               {!isAuthenticated ? (
                 <>
                   <li className="nav-item">
-                    <Link className="nav-link" to="/login">Login</Link>
+                    <Link className="nav-link" to="/login">
+                      Login
+                    </Link>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link" to="/register">Register</Link>
+                    <Link className="nav-link" to="/register">
+                      Register
+                    </Link>
                   </li>
                 </>
               ) : (
                 <li className="nav-item">
-                  <button onClick={handleLogout} className="btn btn-link nav-link">Logout</button>
+                  <button
+                    onClick={handleLogout}
+                    className="btn btn-link nav-link"
+                  >
+                    Logout
+                  </button>
                 </li>
               )}
             </ul>
-
           </div>
         </div>
       </div>
